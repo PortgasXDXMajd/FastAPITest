@@ -1,6 +1,6 @@
-from models.user import User, UserIn,UserOut
-from services.database import get_database
-from helpers.response_model import ResponseModel
+from app.models.user import User, UserIn,UserOut
+from app.services.database import get_database
+from app.helpers.response_model import ResponseModel
 
 
 

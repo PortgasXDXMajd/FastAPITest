@@ -1,6 +1,6 @@
 import uuid
 from pydantic import BaseModel
-from helpers.passwordHelper import hash_password
+from app.helpers.passwordHelper import hash_password
 
 
 class UserIn(BaseModel):

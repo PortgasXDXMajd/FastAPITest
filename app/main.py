@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-import routers.userRouter as userRouter
+import app.routers.userRouter as userRouter
 
 
 app = FastAPI(title="MyApp")

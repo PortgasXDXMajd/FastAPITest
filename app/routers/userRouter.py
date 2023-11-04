@@ -1,8 +1,6 @@
-from fastapi import APIRouter
-from fastapi.responses import HTMLResponse
-from models.user import UserIn
-from fastapi import HTTPException
-from services.user_service import UserService
+from fastapi import APIRouter,HTTPException
+from app.models.user import UserIn
+from app.services.user_service import UserService
 
 
 router = APIRouter()
