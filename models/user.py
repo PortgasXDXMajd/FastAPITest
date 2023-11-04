@@ -9,10 +9,6 @@ class UserIn(BaseModel):
     email: str
     password: str
 
-    def full_name(self):
-        return self.firstname + " " + self.lastname
-
-
 class User:
     userId: str
     firstname: str
@@ -39,7 +35,15 @@ class User:
         self.lastname = user_in.lastname
         self.email = user_in.email
         self.password = hash_password(user_in.password)
-
+    
+    def to_dict(self):
+        return {
+            "userId": self.userId,
+            "firstname": self.firstname,
+            "lastname": self.lastname,
+            "email": self.email,
+            "password": self.password,
+        }
 
 class UserOut(BaseModel):
     userId: str
