@@ -23,7 +23,7 @@ async def GetUserById(userId: str):
         raise HTTPException(status_code=400, detail=str(e))
 
 @router.post("/user")
-async def PostUser(user_in: UserIn):  # Assuming you are taking a Pydantic model as input
+async def PostUser(user_in: UserIn):
     try:
         return await UserService().CreateANewUser(user_in=user_in)
     except Exception as e:

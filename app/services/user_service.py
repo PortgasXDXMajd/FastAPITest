@@ -32,8 +32,13 @@ class UserService:
     
 
     async def CreateANewUser(self,user_in: UserIn):
+        print(user_in)
         newUser = User()
+        print("new User Created")
         newUser.from_user_in(user_in)
+        print("here")
+        print(newUser)
+        print(newUser.to_dict())
         result =  await self.db["User"].insert_one(newUser.to_dict())
         return ResponseModel(body={"id": str(result.inserted_id)})
     
